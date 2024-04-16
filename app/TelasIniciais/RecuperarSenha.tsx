@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Image, Text, TextInput, TouchableOpacity } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
-import Input from '../components/input';
-import BackgroundColor from '../components/Backgrounds';
-import Bottom1 from '../components/bottom';
-import Tittle from '../components/tittle';
+import { Input } from '../../components/input';
+import BackgroundColor from '../../components/Backgrounds';
+import Bottom1 from '../../components/bottom';
+import Tittle from '../../components/tittle';
 
 export default function RecuperarSenha() {
   return (

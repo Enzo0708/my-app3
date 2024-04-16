@@ -1,9 +1,9 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, ScrollView } from 'react-native';
-import Input from '../components/Input';
-import BackgroundColor from '../components/Backgrounds';
-import Bottom1 from '../components/bottom';
+import { Input } from '../../components/input';
+import BackgroundColor from '../../components/Backgrounds';
+import Bottom1 from '../../components/bottom';
 
 export default function CadastreSe() {
   return (
