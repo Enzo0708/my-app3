@@ -12,8 +12,7 @@ export default function RecuperarSenha() {
       <StatusBar style="auto" />
       <BackgroundColor name="Recuperação de senha" color="#011E83" />
       <View style={styles.container2}>  
-        <Tittle name="Insira seu e-mail para recuperar 
-a senha!"/>
+        <Tittle name="Insira seu e-mail para recuperar a senha!"/>
         <Input name="Email:" text='Inisra seu email:' security={false}/>
         <Bottom1 name="Cadastre-se" color="black"/>
 
