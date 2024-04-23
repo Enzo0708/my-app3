@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Objetos2 from '../../components/objeto2';
-import Footer from '../../components/footer';
+import Footer from '../components/footer';
 import NavbarCadastro from '../../components/navbarCadastroItens';
 import ButtonPlus from '../../components/buttom1'; // Importe o ButtonPlus aqui
 import { MaterialIcons } from '@expo/vector-icons';

@@ -1,33 +1,48 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, ScrollView } from 'react-native';
-import { Input } from '../../components/input';
-import BackgroundColor from '../../components/Backgrounds';
-import Bottom1 from '../../components/bottom';
+import { View, StyleSheet, ScrollView} from 'react-native';
+import Status from '@comp/StatusBar';
+import Inputs from '@comp/Input';
+import { useColor } from '../../temas/temas';
+import LinkBtn from '@comp/Linkbtn';
 
-export default function CadastreSe() {
+const Cadastro = () => {
+  const cores = useColor();
+
   return (
-    <ScrollView>
-      <StatusBar style="auto" />
-      <BackgroundColor name="Cadastre-se" color="#FF0000" />
-      <View style={styles.container2}>  
-        <Input name="Nome:" text='Insira seu nome:' security={false}/>
-        <Input name="Sobrenome:" text='Insira seu sobrenome:' security={false}/>
-        <Input name="E-mail:" text='Insira seu email' security={false}/>
-        <Input name="Telefone:" text='Insira seu telefone:' security={false}/>
-        <Input name="Senha:" text='Insira sua senha:' security={true}/>
-        <Input name="Confirmar senha:" text='Confirme sua senha:' security={true}/>
+    <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
+      <Status title="Cadastre-se"/>
+      <ScrollView contentContainerStyle={styles.cadastro}>
 
-        <Bottom1 name="Cadastre-se" color="black"/>
+        <View style={[styles.inputs, {backgroundColor: cores.bgPrimary}]}>
+          <Inputs placeholder="Insira seu nome" title="Nome:"/>
+          <Inputs placeholder="Insira seu sobrenome" title="Sobrenome:" />
+          <Inputs placeholder="Insira seu email" title="E-mail:"/>
+          <Inputs placeholder="Insira seu telefone" title="Telefone"/>
+          <Inputs placeholder="Insira sua senha" secureTextEntry title="Senha:"/>
+          <Inputs placeholder="Confirme sua senha" secureTextEntry title="Confirmar senha:"/>
+          <LinkBtn title="Entrar" href="TelasIniciais/Login" />
+        </View>
 
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container2: {
-    padding: 20,
-
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  cadastro: {
+    flexGrow: 1,
+  },
+  inputs: {
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingBottom: 20,
+    height: '100%',
+    width: '100%',
   },
 });
+
+export default Cadastro;

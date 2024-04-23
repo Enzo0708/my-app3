@@ -1,45 +1,40 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet } from 'react-native';
+import React, { useState } from "react";
+import { View, TextInput, StyleSheet, Text, TextInputProps } from 'react-native';
+import { useColor } from "../temas/temas";
 
-type InputProps = {
-    text: string;
-    name: string;
-    security: boolean;
+interface InputProps extends TextInputProps {
+    title: string,
 }
 
-export function Input({ text, name, security }: InputProps) {
-    const [hovered, setHovered] = useState("#F39200");
+export default function Input({ title, ...props }: InputProps) {
+    const cores = useColor();
+
+
+    const [hover, setHover] = useState("F5F5F5");
+    const styles = StyleSheet.create({
+        container: {
+            margin: 8,
+            
+        },
+        input: {
+            height: 38,
+            width: 350,
+            borderRadius: 5,
+            padding: 10,
+            borderWidth: 1,
+            borderColor: hover,
+        },
+        textoinp: {
+            fontSize: 15,
+            fontWeight: 'bold',
+            margin: 5,
+        },
+    });
 
     return (
-        <View>
-            <Text>{name}</Text>
-            <TextInput
-                placeholder={text}
-                style={[styles.input, { borderColor: hovered }]}
-                onFocus={() => {
-                    setHovered("#F39200");
-                }}
-                onBlur={() => {
-                    setHovered("#F5F5F5");
-                }}
-                secureTextEntry={security}
-            />
+        <View style={styles.container}>
+            <Text style={[styles.textoinp, {color: cores.textColorPrimaryVariant}]}>{title}</Text>
+            <TextInput {...props} style={[styles.input, {color: cores.bgPrimaryVariant}]} placeholderTextColor="#808080" onFocus={() => {setHover("#F39200");}} onBlur={() => {setHover("#f5f5f5");}} />
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    text: {
-        marginTop: 39,
-    },
-    input: {
-        padding: 10,
-        backgroundColor: '#F5F5F5',
-        borderBottomColor: 'gray',
-        marginBottom: 27,
-        height: 40,
-        marginTop: 9,
-        borderWidth: 1,
-        borderRadius: 10,
-    },
-});
