@@ -1,16 +1,19 @@
-import { Drawer } from 'expo-router/drawer';
-import CustomDrawer from '@comp/CustomDrawer';
-import { View } from 'react-native-reanimated/lib/typescript/Animated';
-import { MaterialIcons } from '@expo/vector-icons';
+import { Drawer } from "expo-router/drawer";
+import CustomDrawer from "@comp/CustomDrawer";
+import { FontAwesome6 } from "@expo/vector-icons";
 
-export default function layout() {
+export default function Layout() {
     return (
-        <Drawer drawerContent={(...props) => (
-            CustomDrawer(...props)
+        <Drawer  drawerContent={(props) => (
+            <CustomDrawer {...props} />
         )}>
-            <Drawer.Screen name="Home" options={{headerShown: false, drawerIcon: ({size, color}) =>(
-                <MaterialIcons name="home" size={size} color={color} />
-            )}} />
+            <Drawer.Screen name="Home" options={{
+                headerShown: false, 
+                drawerIcon: ({size, color}) => (
+                    <FontAwesome6 name="user-large" size={size} color={color} />
+                )
+            }} />
+            
         </Drawer>
-    )
+    );
 }
