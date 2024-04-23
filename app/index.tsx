@@ -1,6 +1,6 @@
 import Login from "./TelasIniciais/Login";
 
-export default function Index() {
-  return <Login />
+export default function index() {
+    return <Login />;
 
-}
+} 
