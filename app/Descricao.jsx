@@ -4,7 +4,7 @@ import {MaterialCommunityIcons } from '@expo/vector-icons';
 import { Link } from "expo-router";
 
 
-const Descricao = () => {
+const DescricaoIten = () => {
     return(
         <View style={styles.container}>
             <View style={styles.corpo}>
@@ -67,4 +67,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Descricao;
+export default DescricaoIten;

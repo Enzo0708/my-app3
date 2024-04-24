@@ -1,8 +1,8 @@
 import { View, StyleSheet, Text } from 'react-native';
-import Status from '@comp/StatusBar';
+import Status from '@comp/Status';
 import Inputs from '@comp/Input';
 import { useColor } from '../../temas/temas';
-import LinkBtn from '@comp/Linkbtn';
+import LinkBtn from '@comp/Link';
 
 const RecupSenha = () => {
     const BotaoPress = () => {

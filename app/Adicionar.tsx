@@ -1,8 +1,8 @@
 import React from "react";
 import { View, StyleSheet} from "react-native";
-import InputinventoryInput from "@comp/Inputitens";
+import InputinventoryInput from "@comp/InputI";
 
-const AddIten = () => {
+const AdicIten = () => {
     return(
         <View style={styles.container}>
             <View style={styles.inputContainer}>
@@ -39,4 +39,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default AddIten;
+export default AdicIten;
