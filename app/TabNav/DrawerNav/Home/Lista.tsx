@@ -1,63 +1,59 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, ScrollView } from 'react-native';
-import Footer from '../../../../components/footer';
-import ButtonPlus from '../../../../components/bottom1';
-import Objetos from '../../../../components/objetos';
-import NavbarCadastro from '../../../../components/navbarCadastroItens';
-import { Ionicons } from '@expo/vector-icons';
-import { Fontisto } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
-import { MaterialIcons } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
+import React from "react";
+import { View, StyleSheet, ScrollView } from "react-native";
+import { AntDesign } from '@expo/vector-icons';
+import { Link } from "expo-router";
+import Itens from "@comp/Itens";
+import { useColor } from "../../../../temas/temas";
 
-export default function Inventarios() {
-  return (
-  
+const Patrimonio = () => {
+    const cores = useColor();
 
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <NavbarCadastro color="#FFFFFF" colorText='black' text='Lista'icons={{
-        icon1: <Ionicons name="menu-sharp" size={24} color="black" />,
-        icon2: <Fontisto name="zoom" size={24} color="black" />
-      }}/>
-      <ScrollView>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-        <Objetos text="CADEIRA" color="#FFFFFF" number='956389'/>
-      </ScrollView>
-      <Footer color='#FF0000' iconNav={{
-        icon1nav: <FontAwesome name="list-ol" size={30} color="white" />,
-        icon2nav: <MaterialIcons name="flip-camera-ios" size={30} color="white" />
-      }}/>
-      <ButtonPlus iconAdd={{
-        iconButtom: <Entypo name="circle-with-plus" size={50} color="red" />
-      }}/>
-    </View>       
-    
-  );
+    return(
+        <View style={[styles.container, {backgroundColor:cores.bgPrimary}]}>
+            <ScrollView>
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+                <Itens id={956389} item={'CADEIRA SENAI'} />
+            </ScrollView>
+
+            <View style={styles.addButtonContainer}>
+                <Link href="/Additens" asChild>
+                    <AntDesign name="pluscircle" size={50} color="red"  />
+                </Link>
+            </View>
+
+
+
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+    },
+    addButtonContainer: {
+        position: "absolute",
+        bottom: 20,
+        right: 0,
+        margin: 20,
+    },
+    text: {
+        color: "#0000",
+        fontSize: 16,
+    }, 
 });
+    
+export default Patrimonio;
