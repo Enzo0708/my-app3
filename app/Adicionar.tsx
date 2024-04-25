@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet} from "react-native";
 import InputinventoryInput from "@comp/InputI";
 
-const AdicIten = () => {
+const AddIten = () => {
     return(
         <View style={styles.container}>
             <View style={styles.inputContainer}>
@@ -39,4 +39,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default AdicIten;
+export default AddIten;
