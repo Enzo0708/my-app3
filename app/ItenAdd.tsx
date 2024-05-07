@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet} from "react-native";
-import InputinventoryInput from "@comp/InputI";
+import InputinventoryInput from "@comp/Input2";
 
 const AddIten = () => {
     return(

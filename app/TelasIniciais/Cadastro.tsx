@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView} from 'react-native';
-import Status from '@comp/Status';
+import Status from '@comp/StatusBar';
 import Inputs from '@comp/Input';
 import { useColor } from '../../temas/temas';
-import LinkBtn from '@comp/Link';
+import LinkBtn from '@comp/LinkButton';
 
 const Cadastro = () => {
   const cores = useColor();

@@ -24,7 +24,7 @@ export default function Input({ title, ...props }: InputProps) {
             borderWidth: 1,
             borderColor: hover,
         },
-        textoinp: {
+        textInput: {
             fontSize: 15,
             fontWeight: 'bold',
             margin: 5,
@@ -33,7 +33,7 @@ export default function Input({ title, ...props }: InputProps) {
 
     return (
         <View style={styles.container}>
-            <Text style={[styles.textoinp, {color: cores.textColorPrimaryVariant}]}>{title}</Text>
+            <Text style={[styles.textInput, {color: cores.textColorPrimaryVariant}]}>{title}</Text>
             <TextInput {...props} style={[styles.input, {color: cores.bgPrimaryVariant}]} placeholderTextColor="#808080" onFocus={() => {setHover("#F39200");}} onBlur={() => {setHover("#f5f5f5");}} />
         </View>
     );

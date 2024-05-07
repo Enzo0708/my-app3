@@ -12,11 +12,6 @@ export default function Itens({id, item }: Props){
     const cores = useColor();
 
     const styles = StyleSheet.create({
-        display: {
-            borderBottomColor: '#f5f5f5',
-            borderBottomWidth: 1,
-            gap: 10,
-        },
         text : {
             fontSize: 20,
             fontWeight: '500',
@@ -35,10 +30,15 @@ export default function Itens({id, item }: Props){
             marginLeft: 25,
             marginBottom: 20,
         },
+        display: {
+            borderBottomColor: '#f5f5f5',
+            borderBottomWidth: 1,
+            gap: 10,
+        },
     });
     return(
         <View style={styles.display}>
-            <Link href="/DescricaoIten" asChild>
+            <Link href="/DescItem" asChild>
                 <Text style={styles.text}>{id}</Text>
             </Link>
                 <Text style={styles.item}>{item}</Text>

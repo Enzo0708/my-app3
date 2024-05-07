@@ -12,12 +12,12 @@ export default function Botao({ label, onPress }: Props){
       padding: 10,
     },
     button: {
-      backgroundColor: 'black',
-      padding: 10,
-      borderRadius: 5,
       marginTop: 10,
       alignItems: 'center',
       width: 350,
+      backgroundColor: 'black',
+      padding: 10,
+      borderRadius: 5,
     },
     buttonText: {
       color: 'white',

@@ -1,9 +1,9 @@
 import React from "react";
 import { View, StyleSheet, TouchableOpacity, Text} from "react-native";
-import PatriBar from "@comp/Patrimonio";
+import PatriBar from "@comp/Patrimonios";
 import {AntDesign, MaterialIcons } from '@expo/vector-icons';
 import Footbar from "@comp/Footer";
-import InputinventoryInput from "@comp/InputI";
+import InputinventoryInput from "@comp/Input2";
 import { Link } from "expo-router";
 
 const Editar = () => {

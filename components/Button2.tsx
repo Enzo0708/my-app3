@@ -5,15 +5,15 @@ import { FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
 export default function Bottom(){
     const styles = StyleSheet.create({
         display: {
-            position: "absolute",
-            bottom: 0,
-            height: 60,
-            width: "90%",
             flexDirection: "row",
             justifyContent: "center",
             gap: 20,
             alignItems: "center",
             backgroundColor: "#ff0000",
+            position: "absolute",
+            bottom: 0,
+            height: 60,
+            width: "90%",
         },
     });
 

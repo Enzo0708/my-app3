@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet} from 'react-native';
-import Status from '@comp/Status';
+import Status from '@comp/StatusBar';
 import { ActivityIndicator } from 'react-native';
 import { useColor } from '../../temas/temas';
 

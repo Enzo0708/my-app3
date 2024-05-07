@@ -28,7 +28,7 @@ const Patrimonio = () => {
             </ScrollView>
 
             <View style={styles.addButtonContainer}>
-                <Link href="/Additens" asChild>
+                <Link href="../../../ItenAdd" asChild>
                     <AntDesign name="pluscircle" size={50} color="red"  />
                 </Link>
             </View>

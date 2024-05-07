@@ -16,7 +16,7 @@ export default function PatriBar({children, color}: Props){
             padding: 4,
             justifyContent: "center",
         },
-        separar: {
+        space: {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
@@ -26,7 +26,7 @@ export default function PatriBar({children, color}: Props){
     return (
         <View style={[styles.container, {backgroundColor: color}]}>
             <StatusBar backgroundColor="black"/>
-            <View style={styles.separar}>{children}</View>
+            <View style={styles.space}>{children}</View>
         </View>
     );
 }

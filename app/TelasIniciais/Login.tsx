@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { Link } from 'expo-router';
-import Status from '@comp/Status';
+import Status from '@comp/StatusBar';
 import Inputs from '@comp/Input';
-import LinkBtn from '@comp/Link';
+import LinkBtn from '@comp/LinkButton';
 import { useColor } from '../../temas/temas';
 
 const Login = () => {
@@ -16,7 +16,7 @@ const Login = () => {
                 <Text style={[styles.texto, { color: cores.textColorPrimary }]}>Faça Login para Acessar o Sistema!</Text>
                 <Inputs placeholder="Insira seu email:" title="E-mail:" />
                 <Inputs placeholder="Insira sua senha:" secureTextEntry title="Senha:" />
-                <LinkBtn title="Entrar" href="TabNav" />
+                <LinkBtn title="Entrar" href={"../TabNav/DrawerNav"} />
                 <View style={styles.linksContainer}>
                     <Link href="TelasIniciais/RecupSenha" style={{ color: cores.bginfo }} asChild>
                         <Text style={styles.linkText}>Esqueceu a senha?</Text>

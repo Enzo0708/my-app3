@@ -8,7 +8,7 @@ export default function CustomDrawer(props: any){
     const cores = useColor();
 
     const styles = StyleSheet.create({
-        caixa: {
+        container0: {
             alignItems: 'center',
             padding: 20,
             height: 130,
@@ -16,7 +16,7 @@ export default function CustomDrawer(props: any){
             display: 'flex',
             flexDirection: 'row',
         },
-        infoUser: {
+        Info: {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -24,27 +24,27 @@ export default function CustomDrawer(props: any){
             textAlign: 'center',
             color: 'gray',
         },
-        titulo: {
+        tittle: {
             fontSize: 18,
             fontWeight: 'bold',
             color: cores.textColorPrimaryVariant
         },
-        texto: {
+        text: {
             fontSize: 16,
             color: cores.textColorPrimaryVariant
         },
-        container: {
+        container1: {
             flex: 1
         }
     });
 
     return (
-        <View style={[styles.container, {backgroundColor: cores.bgPrimary}]}>
-            <View style={[styles.caixa, {backgroundColor: cores.bgPrimary}]}>
+        <View style={[styles.container1, {backgroundColor: cores.bgPrimary}]}>
+            <View style={[styles.container0, {backgroundColor: cores.bgPrimary}]}>
                 <FontAwesome5 name="user-circle" size={80} color={cores.textColorPrimaryVariant} />
-                <View style={styles.infoUser}>
-                    <Text style={styles.titulo}>Flávio Josefo</Text>
-                    <Text style={styles.texto}>flavio@email.com</Text>
+                <View style={styles.Info}>
+                    <Text style={styles.tittle}>Enzo Biason</Text>
+                    <Text style={styles.text}>enzo@gmail.com</Text>
                 </View>
             </View>
             <DrawerItemList {...props}/>
