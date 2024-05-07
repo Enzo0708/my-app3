@@ -11,7 +11,7 @@ const Editar = () => {
         <View style={styles.container}>
             <PatriBar color="red">
                 <TouchableOpacity>
-                    <Link href="/DescricaoIten" asChild>
+                    <Link href="/DescItem" asChild>
                         <AntDesign name="arrowleft" size={25} color="#ffff" />
                     </Link>
                 </TouchableOpacity>
